@@ -1,0 +1,18 @@
+# Workflow
+name: Hellow
+
+# On tell when the workflow should run.
+on: workflow_dispatch
+# Jobs
+jobs:
+  say-hello:
+
+  #create Ephermal container with Ubuntu Running.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hellow to everyone
+        run: echo "Hello Dosto"
+
+# Steps
+
+# Actions
