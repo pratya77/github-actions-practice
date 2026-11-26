@@ -16,14 +16,13 @@ jobs:
           - name: build usging Docker
             run: echo "Building using Docker"
     test :
-        needs:
-          - build
+        needs: [build]
         runs-on: ubuntu-latest
         steps:
           - name: Runnng test cases
             run: echo "Testing the app"
     deploy :
-        needs: test
+        needs: [test]
         runs-on: ubuntu-latest
         steps:
           - name : deploying on the machine
