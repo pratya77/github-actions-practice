@@ -17,3 +17,6 @@ jobs:
 
       - name: Install Linter
         run: pipx install ruff
+
+      - name: Check the files for linter
+        run: ruff check .
