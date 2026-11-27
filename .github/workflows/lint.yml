@@ -1,0 +1,19 @@
+# What is the goal of your workflow.
+# The workflow of the workflow is the linter will check the syntax, format and Indentation.
+
+name: Auto Linter
+
+on: 
+  push: 
+    paths: "*py" 
+
+jobs:
+  code : 
+    runs-on: ubuntu-latest
+    # This  step will automatically clone the code of current branch into the runner
+    steps:
+      - name: Checkout/Clone the code
+        uses: actions/checkout@v7
+
+      - name: Install Linter
+        run: pipx install ruff
